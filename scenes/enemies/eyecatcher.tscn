@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0kfissxojwfo"]
+
+[ext_resource type="Script" path="res://scripts/enemies/eyecatcher.gd" id="1_8knke"]
+[ext_resource type="PackedScene" uid="uid://dv8rr0k6nxjyx" path="res://scenes/projectiles/pinkarrow.tscn" id="2_igdb8"]
+[ext_resource type="Texture2D" uid="uid://dja1d0hjbmdr5" path="res://images/enemies/eyecatcher.png" id="2_joj2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8fex"]
+size = Vector2(78.9996, 98.0003)
+
+[node name="Eyecatcher" type="Area2D"]
+position = Vector2(2, 1)
+script = ExtResource("1_8knke")
+shoot_cooldown = 0.5
+projectile_scene = ExtResource("2_igdb8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 2.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_m8fex")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -47.0
+offset_top = -37.0
+offset_right = 53.0
+offset_bottom = 43.0
+texture = ExtResource("2_joj2e")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

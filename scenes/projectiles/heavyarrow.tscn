@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsidr53sjqkyy"]
+
+[ext_resource type="Script" path="res://scripts/enemyprojectile.gd" id="1_qnie8"]
+[ext_resource type="Texture2D" uid="uid://bic4b320pyf1i" path="res://images/heavyarrow.png" id="2_2j0jh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r54gk"]
+height = 24.0
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_qnie8")
+speed = 250
+damage = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2j0jh")
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r54gk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

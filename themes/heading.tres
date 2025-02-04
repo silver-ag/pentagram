@@ -1,0 +1,5 @@
+[gd_resource type="Theme" format=3 uid="uid://corbg6obg0ug2"]
+
+[resource]
+default_font_size = 28
+RichTextLabel/fonts/normal_font = null

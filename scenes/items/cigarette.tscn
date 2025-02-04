@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://clb5a20ehhotm"]
+
+[ext_resource type="Script" path="res://scripts/items/cigarette.gd" id="1_5lma6"]
+
+[node name="Cigarette" type="Node2D"]
+script = ExtResource("1_5lma6")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi016kov70vo8"]
+
+[ext_resource type="Script" path="res://scripts/enemies/basicenemy.gd" id="1_mrg45"]
+[ext_resource type="PackedScene" uid="uid://dv8rr0k6nxjyx" path="res://scenes/projectiles/pinkarrow.tscn" id="2_5j583"]
+[ext_resource type="Texture2D" uid="uid://bqufnnc7l6vsh" path="res://images/enemies/speaker.png" id="3_4qkhi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dnrat"]
+radius = 18.0
+height = 60.0
+
+[node name="Speaker" type="Area2D"]
+position = Vector2(2, 1)
+script = ExtResource("1_mrg45")
+projectile_scene = ExtResource("2_5j583")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dnrat")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -28.0
+offset_top = -17.0
+offset_right = 27.0
+offset_bottom = 23.0
+texture = ExtResource("3_4qkhi")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

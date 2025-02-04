@@ -1,0 +1,260 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfln4y8gqcquu"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_0bcdc"]
+[ext_resource type="Texture2D" uid="uid://dwfdtuk5uo3jp" path="res://images/blank_person.png" id="1_ycij0"]
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="3_dswdx"]
+[ext_resource type="Theme" uid="uid://corbg6obg0ug2" path="res://themes/heading.tres" id="4_mtdto"]
+[ext_resource type="Texture2D" uid="uid://bf0k26jvoje1u" path="res://icon.svg" id="5_1j7v4"]
+[ext_resource type="Texture2D" uid="uid://cmkc051mgblml" path="res://images/healthbar.png" id="6_1yj1k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5dng"]
+radius = 18.0
+height = 60.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2m5p8"]
+bg_color = Color(0.180587, 0.0667181, 0.196662, 1)
+
+[sub_resource type="Theme" id="Theme_toalt"]
+Panel/styles/panel = SubResource("StyleBoxFlat_2m5p8")
+
+[node name="character" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_0bcdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ycij0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 4)
+shape = SubResource("CapsuleShape2D_r5dng")
+
+[node name="inventory" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("3_dswdx")
+
+[node name="unlocatednode" type="Node" parent="inventory"]
+
+[node name="mainpanel" type="Panel" parent="inventory/unlocatednode"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -244.0
+offset_right = 374.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_toalt")
+
+[node name="title" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme = ExtResource("4_mtdto")
+bbcode_enabled = true
+text = "[center]inventory[/center]"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="avatar" type="TextureRect" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 253.0
+offset_right = 733.0
+offset_bottom = 459.0
+texture = ExtResource("1_ycij0")
+
+[node name="statsdisplay" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 55.0
+offset_right = 751.0
+offset_bottom = 178.0
+text = "mucus:			0
+god:					0
+cigarettes:		0
+delusion:		0
+shark:				0"
+
+[node name="weaponsheading" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "	weapons"
+fit_content = true
+
+[node name="weaponsgrid" type="GridContainer" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 60.0
+offset_right = -170.0
+offset_bottom = 140.0
+grow_horizontal = 2
+columns = 3
+
+[node name="equipmentheading" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 140.0
+offset_bottom = 163.0
+grow_horizontal = 2
+text = "	equipped"
+fit_content = true
+
+[node name="equipmentgrid" type="GridContainer" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -90.0
+offset_right = -170.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="carriedheading" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 320.0
+offset_bottom = 343.0
+grow_horizontal = 2
+text = "	carried"
+fit_content = true
+
+[node name="carriedgrid" type="GridContainer" parent="inventory/unlocatednode/mainpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 340.0
+offset_right = -170.0
+offset_bottom = 500.0
+grow_horizontal = 2
+columns = 8
+
+[node name="detailswindow" type="Panel" parent="inventory/unlocatednode/mainpanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.104
+grow_horizontal = 2
+theme = ExtResource("4_mtdto")
+bbcode_enabled = true
+text = "[center][name][/center]"
+
+[node name="icon" type="TextureRect" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.13
+anchor_right = 0.3
+anchor_bottom = 0.586
+offset_right = -1.52588e-05
+texture = ExtResource("5_1j7v4")
+expand_mode = 1
+
+[node name="stats" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32
+anchor_top = 0.136
+anchor_right = 0.643
+anchor_bottom = 0.588
+offset_left = -1.52588e-05
+offset_right = -0.25
+text = "mucus:			0
+god:					0
+cigarretes:		0
+delusion:		0
+shark:				0"
+
+[node name="description" type="RichTextLabel" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.015
+anchor_top = 0.606
+anchor_right = 0.983
+anchor_bottom = 0.978
+offset_left = -0.25
+offset_right = -0.25
+offset_bottom = -3.05176e-05
+text = "[description]"
+
+[node name="equipbutton" type="Button" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.733
+anchor_top = 0.206
+anchor_right = 0.867
+anchor_bottom = 0.314
+offset_left = 0.25
+offset_top = -36.0
+offset_right = -0.250061
+offset_bottom = -36.0
+text = "(un)equip"
+
+[node name="dropbutton" type="Button" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.733
+anchor_top = 0.206
+anchor_right = 0.867
+anchor_bottom = 0.314
+offset_left = 1.25
+offset_top = 33.0
+offset_right = 0.749939
+offset_bottom = 33.0
+text = "drop"
+
+[node name="closebutton" type="Button" parent="inventory/unlocatednode/mainpanel/detailswindow"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.733
+anchor_top = 0.206
+anchor_right = 0.867
+anchor_bottom = 0.314
+offset_left = 1.25
+offset_top = 104.0
+offset_right = 0.749939
+offset_bottom = 104.0
+text = "back"
+
+[node name="healthbar" type="TextureProgressBar" parent="."]
+top_level = true
+anchors_preset = -1
+anchor_top = 0.949
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0479736
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("6_1yj1k")
+tint_progress = Color(0.505882, 0.462745, 0.862745, 1)
+
+[connection signal="pressed" from="inventory/unlocatednode/mainpanel/detailswindow/equipbutton" to="inventory" method="_on_equipbutton_pressed"]
+[connection signal="pressed" from="inventory/unlocatednode/mainpanel/detailswindow/dropbutton" to="inventory" method="_on_dropbutton_pressed"]
+[connection signal="pressed" from="inventory/unlocatednode/mainpanel/detailswindow/closebutton" to="inventory" method="_on_closebutton_pressed"]

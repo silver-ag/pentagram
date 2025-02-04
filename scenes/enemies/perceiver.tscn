@@ -1,0 +1,31 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpf2tjjwuyrip"]
+
+[ext_resource type="Texture2D" uid="uid://b4yp4ldylpd1c" path="res://images/enemies/perceiver.png" id="1_gt7kb"]
+[ext_resource type="Script" path="res://scripts/enemies/basicenemy.gd" id="1_mvxp3"]
+[ext_resource type="PackedScene" uid="uid://bt4fxkkicshp2" path="res://scenes/items/cash.tscn" id="2_6g46w"]
+[ext_resource type="PackedScene" uid="uid://bmpjl202gmxbs" path="res://scenes/items/vomit.tscn" id="2_g3ir1"]
+[ext_resource type="PackedScene" uid="uid://cj2q3cx3nowts" path="res://scenes/items/anchor.tscn" id="3_s36hc"]
+[ext_resource type="PackedScene" uid="uid://clb5a20ehhotm" path="res://scenes/items/cigarette.tscn" id="4_2daff"]
+[ext_resource type="PackedScene" uid="uid://cbrkplcf1q46f" path="res://scenes/items/symbol.tscn" id="5_ba565"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dnrat"]
+radius = 15.0
+height = 42.0
+
+[node name="Perceiver" type="Area2D"]
+position = Vector2(2, 1)
+script = ExtResource("1_mvxp3")
+drops = [[ExtResource("2_g3ir1"), 0.05], [ExtResource("3_s36hc"), 0.05], [ExtResource("4_2daff"), 0.05], [ExtResource("5_ba565"), 0.05], [ExtResource("2_6g46w"), 0.05]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dnrat")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -28.0
+offset_top = -17.0
+offset_right = 27.0
+offset_bottom = 23.0
+texture = ExtResource("1_gt7kb")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

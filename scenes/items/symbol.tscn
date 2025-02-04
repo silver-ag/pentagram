@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbrkplcf1q46f"]
+
+[ext_resource type="Script" path="res://scripts/items/symbol.gd" id="1_0533l"]
+
+[node name="Symbol" type="Node2D"]
+script = ExtResource("1_0533l")

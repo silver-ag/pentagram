@@ -1,0 +1,48 @@
+
+
+articulate five answer-gods:
+- MUCUS: embodiment at all costs, vomit is sacred because it's embodied, etc
+- GOD: light of the true thing, contemplation to the exclusion of action
+- CIGARRETTES: towards intensity, exemplified by drug use
+- DELUSION: materialist certainty, floating monuments of logic, scientism
+- SHARK: assert a new covenent, 'fine, then i'll be the villain'
+
+
+five characters, each starts with zero in all but one score. (plus another - natalia the innocent - who starts at all zero)
+bullet dodging gameplay to fight suffering. equip items such as weapons and shields that affect the five stats. most are automatic, a few require activation.
+game is fairly short, with different endings depending on your top stat at the end, plus bonus endings for having different combinations equal and one for all zeros
+
+enemies:
+- perceiver: a floating eye
+- speaker: a floating mouth
+- albatross: clues in the name
+- insectoid: a crab
+- restrainer: a latex-gloved hand that flies at you
+- light-leech: a dead flower that shoots in all directions
+- teeth of the void: spiky things that shoot and divebomb
+- eyecatcher: mirrored something that shoots to whichever side of the you're on (and typically is on an up and down path)
+bosses:
+- the solipsist: surrounded by a slowly but endlessly refilling circle of orbiting restrainers, you'll have to shoot a hole in the circle, get or shoot through to do some damage, but at points it blasts everything inside the circle
+- the sovereign: an infection that spreads through the endless waves of enemies, you'll have to kill all instances of it to stop it spreading
+- the first mistake: classic multi-stage big boss, area denial stuff. first stage has a prominent closed mouth that opens to reveal an eyeball
+
+equipment:
+- vomit, anchor, cigarette, symbol, cash: increase the corresponding stat
+- bible, textbook, dictionary: delusion-based rotating barrier items
+- crop top: cigarettes and a bit of mucus, your avatar wears it (it says 'slut' in big pink letters)
+- suit: shark and a bit of delusion, likewise (you can wear both at once)
+- knife: weapon, do damage on impact that's the average of your cigarettes and shark
+- tooth: mucus-based weapon
+- rocket: homing weapon
+- laser: high-power activated weapon
+- tear: slow healing
+- sleeping pills: activated shield, mucus-based
+- ???: shoot sideways
+
+character-specific equipment drops
+natalia:
+- natalia's heart: a heart with a hole in that triples how long you're invincible after being hit
+- natalia's chains: broken chains attached to your wrists that slash across the screen when you recover from a hit, charged by how much you've been hit for including while invincible
+[god]:
+- determinist loup: see attacks telegraphed before they happen, by an amount of time based on god
+- four-dimensional flower: activated item to phase through things

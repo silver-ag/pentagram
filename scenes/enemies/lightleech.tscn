@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bub8g1seas5w4"]
+
+[ext_resource type="Script" path="res://scripts/enemies/lightleech.gd" id="1_qmyra"]
+[ext_resource type="Texture2D" uid="uid://cu6llngk282rc" path="res://images/enemies/lightleech.png" id="2_wlsv6"]
+[ext_resource type="PackedScene" uid="uid://olx46m0muygk" path="res://scenes/projectiles/yellowarrow.tscn" id="2_yppwy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dnrat"]
+radius = 38.0
+height = 76.0
+
+[node name="LightLeech" type="Area2D"]
+position = Vector2(2, 1)
+script = ExtResource("1_qmyra")
+projectile_scene = ExtResource("2_yppwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dnrat")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -37.0
+offset_top = -33.0
+offset_right = 38.0
+offset_bottom = 42.0
+texture = ExtResource("2_wlsv6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

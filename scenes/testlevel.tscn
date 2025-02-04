@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://cesuu13ehlacp"]
+
+[ext_resource type="PackedScene" uid="uid://bfln4y8gqcquu" path="res://scenes/character.tscn" id="1_h2ytx"]
+[ext_resource type="Script" path="res://scripts/enemies/formations/pathformation.gd" id="2_j0jta"]
+[ext_resource type="Script" path="res://scripts/enemies/formations/fixedshuttleformation.gd" id="2_xc6de"]
+[ext_resource type="PackedScene" uid="uid://bard6nvbu8pnc" path="res://scenes/enemies/crab.tscn" id="3_at076"]
+[ext_resource type="PackedScene" uid="uid://cpf2tjjwuyrip" path="res://scenes/enemies/perceiver.tscn" id="3_qsvar"]
+[ext_resource type="PackedScene" uid="uid://bub8g1seas5w4" path="res://scenes/enemies/lightleech.tscn" id="6_xvqqo"]
+[ext_resource type="PackedScene" uid="uid://c0kfissxojwfo" path="res://scenes/enemies/eyecatcher.tscn" id="7_m5tiw"]
+[ext_resource type="PackedScene" uid="uid://cd7mgwkc50umq" path="res://scenes/lootmanager.tscn" id="8_5nxv2"]
+
+[node name="Testlevel" type="Node2D"]
+
+[node name="character" parent="." instance=ExtResource("1_h2ytx")]
+position = Vector2(573, 435)
+
+[node name="testformationB" type="Node2D" parent="."]
+script = ExtResource("2_xc6de")
+
+[node name="LightLeech" parent="testformationB" instance=ExtResource("6_xvqqo")]
+
+[node name="Crab2" parent="testformationB" instance=ExtResource("3_at076")]
+
+[node name="Crab3" parent="testformationB" instance=ExtResource("3_at076")]
+
+[node name="testformationA" type="Node2D" parent="."]
+script = ExtResource("2_j0jta")
+
+[node name="Perceiver" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver2" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver3" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver4" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver5" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver6" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver7" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver8" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Perceiver9" parent="testformationA" instance=ExtResource("3_qsvar")]
+
+[node name="Eyecatcher" parent="testformationA" instance=ExtResource("7_m5tiw")]
+
+[node name="Lootmanager" parent="." instance=ExtResource("8_5nxv2")]

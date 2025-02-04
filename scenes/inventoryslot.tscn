@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyp0ileo0fqdr"]
+
+[ext_resource type="Script" path="res://scripts/inventoryslot.gd" id="1_531vp"]
+
+[node name="Inventoryslot" type="Button"]
+custom_minimum_size = Vector2(70, 70)
+offset_right = 70.0
+offset_bottom = 70.0
+script = ExtResource("1_531vp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 65.0
+expand_mode = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
