@@ -57,6 +57,7 @@ func equip_item(item):
 	slot.set_item(item)
 	self.add_child(item)
 	remove_carried(item)
+	item.equipped(get_parent())
 	reload_stats()
 
 func unequip_item(item):
@@ -66,6 +67,7 @@ func unequip_item(item):
 	for slot in equipmentgrid.get_children():
 		if slot.item == item:
 			equipmentgrid.remove_child(slot)
+	item.unequipped()
 	reload_stats()
 
 func equip_weapon(item):
@@ -77,6 +79,7 @@ func equip_weapon(item):
 			var slot = inventoryslot_scene.instantiate()
 			weaponsgrid.add_child(slot)
 			slot.set_item(item)
+	item.equipped(get_parent())
 	reload_stats()
 
 func unequip_weapon(item):
@@ -86,6 +89,7 @@ func unequip_weapon(item):
 	for slot in weaponsgrid.get_children():
 		if slot.item == item:
 			weaponsgrid.remove_child(slot)
+	item.unequipped()
 	reload_stats()
 
 func add_carried(item):

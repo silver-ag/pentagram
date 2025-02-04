@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch7tprud37gbt"]
+
+[ext_resource type="Script" path="res://scripts/items/dictionary.gd" id="1_mmwk8"]
+[ext_resource type="Texture2D" uid="uid://cnukr4syfyyqx" path="res://images/items/dictionary.png" id="2_e6dm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wndl"]
+size = Vector2(36, 35)
+
+[node name="Dictionary" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_mmwk8")
+
+[node name="orbiter" type="Area2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbiter"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_5wndl")
+
+[node name="TextureRect" type="TextureRect" parent="orbiter"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 21.0
+offset_bottom = 23.0
+texture = ExtResource("2_e6dm4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="orbiter" to="." method="_on_orbiter_area_entered"]

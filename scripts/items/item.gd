@@ -10,3 +10,8 @@ var delusion = 0
 var shark = 0
 var is_weapon = false
 var icon = preload('res://icon.svg')
+
+func equipped(player_ref):
+	pass
+func unequipped():
+	pass

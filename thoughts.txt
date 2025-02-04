@@ -10,7 +10,10 @@ articulate five answer-gods:
 
 five characters, each starts with zero in all but one score. (plus another - natalia the innocent - who starts at all zero)
 bullet dodging gameplay to fight suffering. equip items such as weapons and shields that affect the five stats. most are automatic, a few require activation.
-game is fairly short, with different endings depending on your top stat at the end, plus bonus endings for having different combinations equal and one for all zeros
+game is fairly short, with different endings depending on your top stat at the end, plus bonus endings for having all equal and one for when none of those conditions are met (ie. some but not all are equal).
+these endings are brief VN segments with more than one sort of sub-ending each
+
+
 
 enemies:
 - perceiver: a floating eye

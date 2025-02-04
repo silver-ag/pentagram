@@ -10,7 +10,7 @@ var target_position = Vector2(0,0)
 var cooldown_tracker = 0
 @export var projectile_scene = preload("res://scenes/projectiles/bluearrow.tscn")
 var itembox_scene = preload("res://scenes/itembox.tscn")
-var drop_chance = {"dirt": 0.2, "common": 0, "rare": 0, "unheard-of": 0, "super-ultra-legendary": 0}
+@export var drop_chance = {"dirt": 0.2, "common": 0, "rare": 0, "unheard-of": 0, "super-ultra-legendary": 0}
 
 @onready var lootmanager = get_tree().root.get_child(0).get_node("Lootmanager")
 

@@ -1,5 +1,5 @@
 extends Area2D
-
+class_name EnemyProjectile
 
 @export var speed = 750
 @export var damage = 1
@@ -7,7 +7,6 @@ var angle = 0
 
 func _process(delta):
 	position += Vector2(sin(angle),cos(angle)) * speed * delta
-
 
 func _on_body_entered(body):
 	if body is Player:

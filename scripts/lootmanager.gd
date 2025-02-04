@@ -6,7 +6,7 @@ var dirt_loot = [preload("res://scenes/items/vomit.tscn"),
 				 preload("res://scenes/items/symbol.tscn"),
 				 preload("res://scenes/items/cash.tscn")]
 
-var common_loot = []
+var common_loot = [preload("res://scenes/items/dictionary.tscn")]
 var rare_loot = []
 var unheardof_loot = []
 var superultralegendary_loot = []
